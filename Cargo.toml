@@ -1,7 +1,7 @@
 [package]
 name = "which_rust"
 version = "0.1.0"
-authors = ["Larry Person <lp10011@gmail.com>"]
+authors = ["Larry Person <lp10011@gmail.com>", "Louis Hyde <https://github.com/1000000000>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
