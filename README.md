@@ -1,7 +1,7 @@
 # which_rust
 `which_rust` is a tiny utility that tells you which version of Rust is active in the current directory, if any.
 
-@1000000000 and I created the first iteration of `which_rust` in a pair-programming session at [The Recurse Center](http://www.recurse.com).
+[@1000000000](https://github.com/1000000000) and I created the first iteration of `which_rust` in a pair-programming session at [The Recurse Center](http://www.recurse.com).
 
 We designed it to be part of `PS1` in shell profiles, so you can tell, just by looking at the prompt in your shell, which version of Rust you're using, inspired by `pyenv` for python.
 
