@@ -38,7 +38,7 @@ RESET="\[$(tput sgr0)\]"
 BRIGHT_BLUE="\[$(tput setaf 4)\]\[$(tput bold)\]"
 
 GIT_PS1_SHOWDIRTYSTATE=true
-export PS1="${MAGENTA}\w${GREEN}`which_rust -p " <" -s ">"`${RED}\$(__git_ps1)${RESET}\n${BRIGHT_BLUE}==>${RESET} "
+export PS1="${MAGENTA}\w${GREEN}`which_rust -p " <rust " -s ">"`${RED}\$(__git_ps1)${RESET}\n${BRIGHT_BLUE}==>${RESET} "
 ```
 
 ## Details
