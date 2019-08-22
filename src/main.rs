@@ -3,32 +3,13 @@ use std::process;
 use std::process::Command;
 use std::vec;
 
-use std::path::{Path, PathBuf};
-use std::fs::File;
-
-use dirs;
-
-fn is_cargo_toml_in_this_directory(path: &Path) -> bool {
-    if let Some(parent) = path.parent() {
-        if let Some(home_dir) = dirs::home_dir() {
-            if home_dir.as_path() == path {
-                return false;
-            }
-        }
-
-        let full_path = path.join("Cargo.toml");
-
-        if File::open(full_path).is_ok() {
-            return true;
-        }
-
-        return is_cargo_toml_in_this_directory(parent);
-    } else {
-        return false;
-    }
-}
+mod lib;
+use lib::is_cargo_toml_in_this_directory;
+use lib::Config;
 
 fn main() {
+
+    let config = Config::from_command_line();
 
     if let Ok(current_dir) = env::current_dir() {
         if !is_cargo_toml_in_this_directory(&current_dir.as_path()) {
@@ -50,7 +31,11 @@ fn main() {
         if split_version.len() < 2 {
             process::exit(1);
         }
-        println!(" {}", split_version[1]);
+        println!("{prefix}{version}{suffix}", 
+            prefix=config.prefix,
+            version=split_version[1],
+            suffix=config.suffix
+        );
     } else {
         process::exit(1)
     }
