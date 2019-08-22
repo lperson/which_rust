@@ -7,6 +7,8 @@ We designed it to be included in `PS1` in shell profiles, so you can tell, just 
 
 Here's an example of a prompt that includes `which_rust`.
 
+![](doc/images/example.png)
+
 ## Installation
 0. These instructions assume you have Rust [installed](https://www.rust-lang.org/tools/install) on your machine.
 1. Clone or download this repository.
